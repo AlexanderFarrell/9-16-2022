@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Question"></h1>
+    <input type="text" name="answer" id="answer">
+    <button onclick="submit()">Send</button>
+</body>
+<script>
+    let questionView = document.getElementById("Question")
+    let answerInput = document.getElementById("answer")
+    let currentAnswer = null
+
+    function submit() {
+        if (currentAnswer == answerInput.value) {
+            document.body.innerHTML = "You are absolutely correct"
+        } else {
+            document.body.innerHTML = "You are absolutely wrong"
+        }
+    }
+
+    function presentQuestion(question, answer) {
+        currentAnswer = answer
+        questionView.innerHTML = question
+    }
+
+    presentQuestion("What is the best dessert?", "Apple Pie");
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
